@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding:5px;
+}
+
+#myBtn {
+  width:370px;
+  font-size: 18px;
+  padding: 10px;
+  left:2px;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="video/bg01.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  
+    <p>Drone Spearfishing</p>
+
+  <p>You are diving in Timor Leste ocean, please read carefully for the seafood standards regulation</p>
+
+  
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Stop to Request";
+  } else {
+    video.pause();
+    btn.innerHTML = "Request Seafood";
+  }
+}
+</script>
+
+
+
+<div id="iFrame1" style="position:absolute; left:-15px; top:520px; z-index:5">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeJaA9cvMNO3eScsNkMKea1JxFax_evHV8sXIgOhvEYRODEA/viewform?embedded=true" frameborder="0" width="410" height="140px" frameborder="0" marginwidth="0" marginheight="0">Loading...</iframe>
+</div>
+
+
+
+</body>
+</html>
